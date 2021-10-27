@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.umss.dev.CoursesManagement.dao.IUsuarioDAO;
-import com.umss.dev.CoursesManagement.model.UsuarioPrueba;
+import com.umss.dev.CoursesManagement.model.UsuarioLogin;
 
 
 
@@ -15,7 +15,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
 	private IUsuarioDAO usuarioDao;
 
 	@Override
-	public UsuarioPrueba finByUsername(String username) {
+	public UsuarioLogin finByUsername(String username) {
 		return usuarioDao.findByUsername(username);
 	}
 

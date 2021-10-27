@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
-import com.umss.dev.CoursesManagement.model.UsuarioPrueba;
+import com.umss.dev.CoursesManagement.model.UsuarioLogin;
 import com.umss.dev.CoursesManagement.service.IUsuarioService;
 
 @Controller
@@ -27,7 +27,7 @@ public class PrivateController {
 		String username = auth.getName();
 		
 		if(session.getAttribute("usuario") == null) {
-			UsuarioPrueba usuario = usuarioService.finByUsername(username);
+			UsuarioLogin usuario = usuarioService.finByUsername(username);
 			usuario.setContraseña(null);
 			session.setAttribute("usuario", usuario);
 		}

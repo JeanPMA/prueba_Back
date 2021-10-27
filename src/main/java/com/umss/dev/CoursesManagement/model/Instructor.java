@@ -32,7 +32,7 @@ public class Instructor {
 	
 	@OneToMany(cascade = {CascadeType.ALL})
 	@JoinColumn(name="id_instructor")
-	private Set<Usuario> usuarios;
+	private Set<UsuarioInstructor> usuarios;
 
 	public Instructor() {
 		super();

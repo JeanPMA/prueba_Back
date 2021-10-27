@@ -6,8 +6,8 @@ package com.umss.dev.CoursesManagement.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Usuario")
-public class Usuario {
+@Table(name = "UsuarioInstructor")
+public class UsuarioInstructor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,10 +17,10 @@ public class Usuario {
 	@ManyToOne
 	@JoinColumn(name="id_instructor")
 	private Instructor instructor;
-	public Usuario() {
+	public UsuarioInstructor() {
 		super();
 	}
-	public Usuario(String username, String passwd, Instructor instructor) {
+	public UsuarioInstructor(String username, String passwd, Instructor instructor) {
 		super();
 		this.username = username;
 		this.passwd = passwd;

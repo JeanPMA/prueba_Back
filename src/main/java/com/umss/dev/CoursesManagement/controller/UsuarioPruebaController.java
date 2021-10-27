@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.umss.dev.CoursesManagement.model.UsuarioPrueba;
+import com.umss.dev.CoursesManagement.model.UsuarioLogin;
 import com.umss.dev.CoursesManagement.service.UsuarioPruebaService;
 
 
@@ -22,12 +22,12 @@ public class UsuarioPruebaController {
 	@Autowired
 	private UsuarioPruebaService usuarioPruebaService;
 	@GetMapping("/usuarios")
-	public List<UsuarioPrueba> getUsuarios(){
+	public List<UsuarioLogin> getUsuarios(){
 		return usuarioPruebaService.findAll();
 		
 	}
 	@GetMapping("/usuarios/{id}")
-	public Optional<UsuarioPrueba> obtenerUsuario(@PathVariable Long id){
+	public Optional<UsuarioLogin> obtenerUsuario(@PathVariable Long id){
 	return usuarioPruebaService.findById(id);
 	}
 

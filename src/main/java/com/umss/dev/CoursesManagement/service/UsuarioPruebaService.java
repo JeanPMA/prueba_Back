@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 
-import com.umss.dev.CoursesManagement.model.UsuarioPrueba;
+import com.umss.dev.CoursesManagement.model.UsuarioLogin;
 
 import com.umss.dev.CoursesManagement.repository.UsuarioPruebaRepository;
 
@@ -22,10 +22,10 @@ public class UsuarioPruebaService {
 		this.usuarioPruebaRepository = usuarioPruebaRepository;
 	}
 
-	public List<UsuarioPrueba> findAll() {
+	public List<UsuarioLogin> findAll() {
 		return usuarioPruebaRepository.findAll();
 	}
-	public Optional<UsuarioPrueba> findById(Long id){
+	public Optional<UsuarioLogin> findById(Long id){
 		logger.info("se esta obteniendo un usuario especifico");
 		return usuarioPruebaRepository.findById(id);
 		}

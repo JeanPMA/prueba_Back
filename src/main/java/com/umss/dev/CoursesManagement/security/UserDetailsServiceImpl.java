@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.umss.dev.CoursesManagement.dao.IUsuarioDAO;
-import com.umss.dev.CoursesManagement.model.UsuarioPrueba;
+import com.umss.dev.CoursesManagement.model.UsuarioLogin;
 
 
 
@@ -23,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		UsuarioPrueba usuario = usuarioDao.findByUsername(username);
+		UsuarioLogin usuario = usuarioDao.findByUsername(username);
 		UserBuilder builder = null;
 		
 		if (usuario != null) {

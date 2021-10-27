@@ -1,9 +1,9 @@
 package com.umss.dev.CoursesManagement.service;
 
-import com.umss.dev.CoursesManagement.model.UsuarioPrueba;
+import com.umss.dev.CoursesManagement.model.UsuarioLogin;
 
 public interface IUsuarioService {
-	public UsuarioPrueba finByUsername(String username);
+	public UsuarioLogin finByUsername(String username);
 
 }
 
