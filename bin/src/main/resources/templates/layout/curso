@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="Layout ::head">
+  
+  </head>
+  <body>
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+    <div class="col-md-8">
+    <h4>Buscar por nombre de curso</h4>
+    <form th:action="@{/nombre}" th:object="${curso}" method="get">
+    <input type="text" th:field="*{nombre}" class="form-control col-md-4"/>
+    <button type="submit" class="btn btn=success mt-4 mb-4">Buscar</button>
+    </form>
+    <table class="table">
+    <thead>
+    	<tr>
+    	<th>nombre</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr th:each="data : ${cursosPorNombre}">
+    	<td th:text ="${data.nombre}"></td>
+    	</tr>
+    </tbody>
+    </table>
+    
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
